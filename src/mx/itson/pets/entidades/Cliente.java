@@ -40,7 +40,10 @@ public class Cliente {
     private String raza;
     private String servicio;
     private String costo;
-
+/**
+ *  Obtiene en un arreglo una lista de clientes perteneciente a la tabla desde la base de datos de MySQL
+ * @return La tabla desde la base de datos con las columnas correspondientes.
+ */
     public static List<Cliente> obtener() {
         List<Cliente> clientes = new ArrayList<>();
         try {
@@ -68,7 +71,17 @@ public class Cliente {
         }
         return clientes;
     }
-    
+    /**
+     * Guarda la información correspondiente de la tabla cliente dependiendo de los valores que el usuario proporcione.
+     * @param nombre
+     * @param celular
+     * @param domicilio
+     * @param nombreMascota
+     * @param raza
+     * @param servicio
+     * @param costo
+     * @return la información añadida del cliente
+     */
     public static boolean guardar(String nombre, String celular, String domicilio, String nombreMascota, String raza, String servicio, String costo) {
         boolean resultado = false;
         try {

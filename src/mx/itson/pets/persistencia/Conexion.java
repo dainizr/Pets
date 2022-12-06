@@ -13,7 +13,10 @@ import java.sql.DriverManager;
  */
 
 public class Conexion {
-    
+    /**
+     * Obtiene la conexión hacia MySQL a la base de datos
+     * @return la conexión entre la base de datos y el proyecto
+     */
     public static Connection obtener(){
         Connection conexion =null;
         try {
